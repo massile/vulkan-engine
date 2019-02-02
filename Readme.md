@@ -93,7 +93,7 @@ Memory type configurations:
      + visible to the *device*
      + not visible to the *host*
   - **Device local, host visible**
-:gi t    + physically attached to the physical device
+     + physically attached to the physical device
      + visible to the *device*
      + visible to the *host*
   - **Host local, host visible**: 
