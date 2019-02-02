@@ -1,7 +1,10 @@
+# Vulkan 3D Engine
+
 ## Vocabulary
 
-- **Physical device** : A physical Vulkan-capable hardware device. It represents a unique device.
+- **Physical device** : A physical Vulkan-capable hardware device (GPU). It represents a unique device.
 - **Device** : Refers to a logical representation of the physical device in an application.
+- **Host**: Refers to a representation of the CPU and its associated memory.
 - **Queue**  : An interface between the execution engine and the application. Gathers the jobs and dispatches them to the physical device.
 - **Command** : An instruction to do some act.
 - **Command buffer** :  A collection of commands; it records the commands and submits them to the queues.
@@ -40,7 +43,7 @@ Within an object [pool](https://en.wikipedia.org/wiki/Pool_(computer_science)) o
 
 ## Components of a Vulkan application
 
-![](vulkanApp.PNG)
+![](vulkanApp.png)
 
  - **Driver** : Acts as an interface between the application and the device itself.
  - **Application** : A user program that is intended to make use of Vulkan.
@@ -89,8 +92,8 @@ Memory type configurations:
      + physically attached to the physical device
      + visible to the *device*
      + not visible to the *host*
-  - **Device local, host visible**:
-     + physically attached to the physical device
+  - **Device local, host visible**
+:gi t    + physically attached to the physical device
      + visible to the *device*
      + visible to the *host*
   - **Host local, host visible**: 
