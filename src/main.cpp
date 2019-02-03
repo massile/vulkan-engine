@@ -1,10 +1,9 @@
-#include <vulkan/vulkan.h>
-#include <iostream>
+#include "Api.h"
 
 int main() {
-    uint32_t instanceLayersCount;
-    vkEnumerateInstanceLayerProperties(&instanceLayersCount, nullptr);
+    Api::PrintInstanceLayerProperties();
 
-    std::cout << "Nombre de layers disponibles: " << instanceLayersCount << std::endl;
-    std::cin.get();
+    VkInstance instance = Api::CreateInstance();
+    VkPhysicalDevice gpu = Api::FetchFirstPhysicalDevice(instance);
+    VkDevice device = Api::CreateLogicalDevice(gpu);
 }

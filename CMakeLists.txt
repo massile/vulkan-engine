@@ -13,7 +13,7 @@ set(VULKAN_LIB_LIST "${VULKAN_PATH}/Lib/vulkan-1.lib")
 
 # Source files to compile
 source_group("include" REGULAR_EXPRESSION "include/*")
-source_group("source" REGULAR_EXPRESSION "src/*")
+source_group("src" REGULAR_EXPRESSION "src/*")
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 file(GLOB_RECURSE CPP_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 file(GLOB_RECURSE HPP_FILES ${CMAKE_CURRENT_SOURCE_DIR}/include/*.*)
