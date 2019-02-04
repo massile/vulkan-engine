@@ -2,7 +2,7 @@
 
 - [Jargon and overview](docs/jargon_overview.md)
 
-## Logical device (GPU abstraction) initialization
+## How a logical device (GPU abstraction) is created
 
 In one picture:
 
