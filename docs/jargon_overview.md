@@ -63,7 +63,7 @@ The application activates the Vulkan drivers by communicating with the *loader* 
   - **it should be platform independent** (platform differences are expressed as *extensions*)
   - **layers can be injected** (driver doesn't need to determine whether the API is used correctly anymore)
 
-## Window presentation surfaces
+### Window presentation surfaces
 
 We need an image to perform the drawing task and put it on the presentation window to display it.
 
@@ -80,7 +80,7 @@ Steps in the application:
   - **Create the swapchain to present to the surface**
   - **Request the images from the swapchain**
 
-## Resource setup
+### Resource setup
 
 Unlike OpenGL, Vulkan provides full low-level and explicit control of the memory.
 Memory type configurations:
@@ -96,7 +96,7 @@ Process for resource management:
 case, the application must first create the resource in a staging buffer that is host visible.
   - **Async transfer** Data is transferred asynchronously using asynchronous commands.
 
-## Pipeline setup
+### Pipeline setup
 
 A pipeline is a set of events that occur in a fixed sequence.
 
@@ -112,15 +112,14 @@ A pipeline is a set of events that occur in a fixed sequence.
   - they are described using **Pipeline layouts** which describe how the descriptors / resources will be used
   - it can be cached with a **Pipeline Cache Object**
 
-
-## Recording commands
+### Recording commands
 
 It's the process of forming command buffers. They are allocated from a **command pool**. 
 A command buffer is recorded by supplying commands within a given start and end scope.
 
 ![](commandRecord.png)
 
-## Queue submission
+### Queue submission
 
 Once the command buffers are recorded they can sent to the physical device via queues.
 A queue submission job,

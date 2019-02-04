@@ -1,6 +1,6 @@
 #include <cassert>
 #include <iostream>
-#include "Api.h"
+#include "Device.h"
 
 namespace Api {
     void PrintInstanceLayerProperties() {
