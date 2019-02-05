@@ -13,7 +13,7 @@
 ## Vulkan's execution model
 
 Command buffers are submitted into queues, which are consumed by the physical device to be processed.
-![](executionModel.png)
+![](img/executionModel.png)
 
 Synchronizarion between queues can be controlled using:
 
@@ -43,7 +43,7 @@ Within an object [pool](https://en.wikipedia.org/wiki/Pool_(computer_science)) o
 
 ## Components of a Vulkan application
 
-![](vulkanApp.png)
+![](img/vulkanApp.png)
 
  - **Driver** : Acts as an interface between the application and the device itself.
  - **Application** : A user program that is intended to make use of Vulkan.
@@ -54,7 +54,7 @@ Within an object [pool](https://en.wikipedia.org/wiki/Pool_(computer_science)) o
 
 ## The Vulkan programming model
 
-![](programmingModel.png)
+![](img/programmingModel.png)
 
 ### Hardware initialization
 
@@ -67,12 +67,12 @@ The application activates the Vulkan drivers by communicating with the *loader* 
 
 We need an image to perform the drawing task and put it on the presentation window to display it.
 
-![](windowPresentation.png)
+![](img/windowPresentation.png)
 
 Context creation does not need to involve the window system (unlike OpenGL), it is managed through WSI:
 It manages the ownership of images via a **swapchain**: while one image is displayed, other ones can be prepared.
 
-![](swapchain.png)
+![](img/swapchain.png)
 
 Steps in the application:
   - **Create a native window**
@@ -100,7 +100,7 @@ case, the application must first create the resource in a staging buffer that is
 
 A pipeline is a set of events that occur in a fixed sequence.
 
-![](pipeline.png)
+![](img/pipeline.png)
 
 - **Descriptor sets and descriptor pools**  interface between resources and shaders. It is subdivided at different levels for performance:
   - low frequency updates (scene level)
@@ -117,7 +117,7 @@ A pipeline is a set of events that occur in a fixed sequence.
 It's the process of forming command buffers. They are allocated from a **command pool**. 
 A command buffer is recorded by supplying commands within a given start and end scope.
 
-![](commandRecord.png)
+![](img/commandRecord.png)
 
 ### Queue submission
 
